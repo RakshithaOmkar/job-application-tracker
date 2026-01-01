@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #4facfe);
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* Dashboard */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  padding: 20px;
+  border-radius: 16px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+.applied { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.interview { background: linear-gradient(135deg, #fbc531, #e1b12c); }
+.offer { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.rejected { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
+
+/* Form */
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+textarea {
+  grid-column: span 2;
+  resize: none;
+}
+
+input, select, textarea, button {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+button {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 15px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #f3f4ff;
+}
+
+tr:nth-child(even) {
+  background: #fafaff;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+.Applied { background: #4facfe; }
+.Interview { background: #fbc531; }
+.Offer { background: #43e97b; }
+.Rejected { background: #ff416c; }
+
+.action-btn {
+  margin: 3px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.edit { background: #7873f5; }
+.delete { background: #ff4b2b; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+  textarea, button {
+    grid-column: span 1;
+  }
+  .filters {
+    flex-direction: column;
+  }
+}

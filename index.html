@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <h1>Job Application Tracker</h1>
+    <p>Track, manage and analyse your job applications</p>
+  </header>
+
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <div class="stat applied">Applied <span id="appliedCount">0</span></div>
+    <div class="stat interview">Interview <span id="interviewCount">0</span></div>
+    <div class="stat offer">Offer <span id="offerCount">0</span></div>
+    <div class="stat rejected">Rejected <span id="rejectedCount">0</span></div>
+  </div>
+
+  <!-- Form -->
+  <div class="card">
+    <form id="jobForm">
+      <input type="text" id="company" placeholder="Company Name" required>
+      <input type="text" id="role" placeholder="Job Role" required>
+      <select id="status">
+        <option>Applied</option>
+        <option>Interview</option>
+        <option>Offer</option>
+        <option>Rejected</option>
+      </select>
+      <textarea id="notes" placeholder="Notes / Follow-up"></textarea>
+      <button type="submit">Save Application</button>
+    </form>
+  </div>
+
+  <!-- Filters -->
+  <div class="card filters">
+    <input type="text" id="search" placeholder="Search company or role">
+    <select id="filterStatus">
+      <option value="All">All Status</option>
+      <option>Applied</option>
+      <option>Interview</option>
+      <option>Offer</option>
+      <option>Rejected</option>
+    </select>
+    <select id="sort">
+      <option value="latest">Latest</option>
+      <option value="oldest">Oldest</option>
+    </select>
+  </div>
+
+  <!-- Table -->
+  <div class="card table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Notes</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="jobTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
